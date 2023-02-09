@@ -15,11 +15,38 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638113920088947921
+  lastModified: 638114813847055281
   FileSizes:
   - Name: 
-    Value: 754
+    Value: 878
   Exists: 1
+--- !u!114 &-4433625344960038088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Sword/Sword_Swing
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Sword/Sword_Swing
+  Guid:
+    Data1: -769535904
+    Data2: 1256509049
+    Data3: 1664628357
+    Data4: -390168154
+  Banks:
+  - {fileID: 2428229906808606333}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,12 +64,14 @@ MonoBehaviour:
   - {fileID: 2428229906808606333}
   EditorEvents:
   - {fileID: 4046570305812232387}
+  - {fileID: -4433625344960038088}
+  - {fileID: 2497577578411567740}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2428229906808606333}
   StringsBanks:
   - {fileID: -9148952746256643447}
-  cacheTime: 638113920088947921
+  cacheTime: 638114813847055281
   cacheVersion: 131601
 --- !u!114 &2428229906808606333
 MonoBehaviour:
@@ -59,9 +88,36 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638113920088937915
+  lastModified: 638114813847035282
   FileSizes: []
   Exists: 1
+--- !u!114 &2497577578411567740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Bow/Arrow_Shot
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Bow/Arrow_Shot
+  Guid:
+    Data1: 63572861
+    Data2: 1197688087
+    Data3: 1997278106
+    Data4: 799240664
+  Banks:
+  - {fileID: 2428229906808606333}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 220
 --- !u!114 &4046570305812232387
 MonoBehaviour:
   m_ObjectHideFlags: 0
