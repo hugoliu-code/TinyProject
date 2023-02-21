@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638114813847055281
+  lastModified: 638125133913372140
   FileSizes:
   - Name: 
-    Value: 878
+    Value: 990
   Exists: 1
 --- !u!114 &-4433625344960038088
 MonoBehaviour:
@@ -46,7 +46,61 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 390
+--- !u!114 &-2924114893351655383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Weapons/Sword/Dagger_Swing
+  m_EditorClassIdentifier: 
+  Path: event:/Weapons/Sword/Dagger_Swing
+  Guid:
+    Data1: -1262825854
+    Data2: 1144334834
+    Data3: 1843071382
+    Data4: 859326044
+  Banks:
+  - {fileID: 2428229906808606333}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 280
+--- !u!114 &-2849410680499041843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemy/Enemy_Hurt/Enemy_Hit
+  m_EditorClassIdentifier: 
+  Path: event:/Enemy/Enemy_Hurt/Enemy_Hit
+  Guid:
+    Data1: 1763360411
+    Data2: 1224653794
+    Data3: -1853335901
+    Data4: 245216330
+  Banks:
+  - {fileID: 2428229906808606333}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 250
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,12 +120,14 @@ MonoBehaviour:
   - {fileID: 4046570305812232387}
   - {fileID: -4433625344960038088}
   - {fileID: 2497577578411567740}
+  - {fileID: -2924114893351655383}
+  - {fileID: -2849410680499041843}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2428229906808606333}
   StringsBanks:
   - {fileID: -9148952746256643447}
-  cacheTime: 638114813847055281
+  cacheTime: 638125133913372140
   cacheVersion: 131601
 --- !u!114 &2428229906808606333
 MonoBehaviour:
@@ -88,7 +144,7 @@ MonoBehaviour:
   Path: Assets/FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638114813847035282
+  lastModified: 638125133913352137
   FileSizes: []
   Exists: 1
 --- !u!114 &2497577578411567740
