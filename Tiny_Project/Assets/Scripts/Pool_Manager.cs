@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pool_Manager : MonoBehaviour
 {
     private List<GameObject> enemyPool;
-    [SerializeField] private int defaultPoolSize = 20;
+    [SerializeField] private int defaultPoolSize = 100;
     [Header("Enemy")]
     [SerializeField] private GameObject enemyPrefab;
     [SerializeField] private Transform enemyHolderParent;
