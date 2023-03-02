@@ -45,5 +45,4 @@ public class Player_Movement : MonoBehaviour
         }
         rb.velocity = direction.normalized * speed * Time.deltaTime * 100; //Scaled for framerate and scaled by 100 to make testing easier
     }
-
 }
