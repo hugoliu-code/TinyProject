@@ -123,6 +123,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &21470422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 21470423}
+  m_Layer: 0
+  m_Name: BulletHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &21470423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 21470422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 178055403}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &64273888
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +182,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab60a87229e7808468d5482d0229c4e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolManager: {fileID: 178055402}
   spawnNumber: 10
 --- !u!4 &64273890
 Transform:
@@ -209,7 +238,7 @@ GameObject:
   - component: {fileID: 178055403}
   - component: {fileID: 178055402}
   m_Layer: 0
-  m_Name: EnemyPool
+  m_Name: Pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -230,6 +259,8 @@ MonoBehaviour:
   defaultPoolSize: 20
   enemyPrefab: {fileID: 4874777115772817293, guid: 00930e0b5be30ae40a8eb1f0af616749, type: 3}
   enemyHolderParent: {fileID: 119138548}
+  bulletPrefab: {fileID: 2476403996105301024, guid: 85e317a2b4116014589a2c5b0b7d9632, type: 3}
+  bulletHolderParent: {fileID: 21470423}
 --- !u!4 &178055403
 Transform:
   m_ObjectHideFlags: 0
@@ -242,6 +273,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 119138548}
+  - {fileID: 21470423}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -373,6 +405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: ec035ac4c49215444a6351b089f9e72e, type: 2}
   bulletSpeed: 10
+  attackDelay: 1
   projectile: {fileID: 2476403996105301024, guid: 85e317a2b4116014589a2c5b0b7d9632, type: 3}
 --- !u!1 &529710523
 GameObject:
@@ -481,19 +514,19 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529710523}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &529710528
 BoxCollider2D:
   m_ObjectHideFlags: 0

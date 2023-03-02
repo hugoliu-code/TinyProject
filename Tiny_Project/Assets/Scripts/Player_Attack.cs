@@ -7,6 +7,7 @@ public class Player_Attack : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] AttackData attackData;
     [SerializeField] float bulletSpeed = 10;
+    [SerializeField] float attackDelay = 1f;
     [SerializeField] GameObject projectile;
     private void Start()
     {
@@ -22,8 +23,14 @@ public class Player_Attack : MonoBehaviour
 
 
 
+        //Old System with Instantiate
+        //GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, 0));
 
-        GameObject bullet = Instantiate(projectile, transform.position, Quaternion.Euler(0, 0, 0));
+        //Pooling System
+        GameObject bullet = Pool_Manager.Instance.RequestBullet();
+        bullet.transform.position = transform.position;
+
+        //Set the speed, direction, and data
         bullet.GetComponent<Rigidbody2D>().velocity = direction.normalized * bulletSpeed;
         bullet.GetComponent<Bullet_Script>().attackData = attackData;
     }
@@ -32,7 +39,7 @@ public class Player_Attack : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(attackDelay);
             Shoot();
 
         }

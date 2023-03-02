@@ -16,6 +16,10 @@ public class Bullet_Script : MonoBehaviour
     }
     private void Update()
     {
+        if(previousPosition.z == 1) //Has this bullet been used before? We need to restart its Previous Position so it doesnt do some incorrect raycast from the position it was before it was destroyed
+        {
+            previousPosition = transform.position;
+        }
         if (hasCollided) { return; }
         RaycastHit2D collisionCheck = Physics2D.Raycast(previousPosition, transform.position - previousPosition, Vector2.Distance(previousPosition, transform.position), collidables);
         if (collisionCheck)
@@ -39,10 +43,13 @@ public class Bullet_Script : MonoBehaviour
 
         tempData.receiver = collision.collider.gameObject;
         Hit_Manager.Instance.BroadcastHit(tempData);
+        gameObject.SetActive(false);
         Invoke("CustomDestroy", 0.01f);
     }
     void CustomDestroy()
     {
-        Destroy(this.gameObject);
+        hasCollided = false; //Reset for next bullet use
+        previousPosition = new Vector3(0, 0, 1); //Set the previous position to a misc/impossible position to indicate it needs to be reset on next bullet use
+        gameObject.SetActive(false);
     }
 }
