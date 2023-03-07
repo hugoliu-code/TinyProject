@@ -43,6 +43,12 @@ public class Player_Movement : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, 0, 0);
             direction.x = 1;
         }
-        rb.velocity = direction.normalized * speed * Time.deltaTime * 100; //Scaled for framerate and scaled by 100 to make testing easier
+        float appliedSpeed = speed * Time.deltaTime * 100;
+        if(appliedSpeed > 100)
+        {
+            //Throttle speed to 0 when Time.deltaTime is unusually high
+            return;
+        }
+        rb.velocity = direction.normalized * appliedSpeed; //Scaled for framerate and scaled by 100 to make testing easier
     }
 }

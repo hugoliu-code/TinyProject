@@ -12,6 +12,7 @@ public class Enemy_Follow : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] float speed;
     [SerializeField] int health = 10;
+    [SerializeField] int expValue = 2;
     private int maxHealth;
     private void Start()
     {
@@ -51,10 +52,12 @@ public class Enemy_Follow : MonoBehaviour
             if(health <= 0)
             {
                 ResetStats();
+                Exp_Manager.Instance.GenerateExp(expValue, transform.position);
                 this.gameObject.SetActive(false);
             }
         }
     }
+
 
     void ResetStats()
     {

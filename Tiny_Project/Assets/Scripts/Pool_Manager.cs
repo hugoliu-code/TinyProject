@@ -6,7 +6,8 @@ public class Pool_Manager : MonoBehaviour
 {
     private List<GameObject> enemyPool;
     private List<GameObject> bulletPool;
-
+    private List<GameObject> expPool;
+ 
 
     [SerializeField] private int defaultPoolSize = 100;
     [Header("Enemy")]
@@ -18,6 +19,10 @@ public class Pool_Manager : MonoBehaviour
     [Header("Bullet")]
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform bulletHolderParent;
+
+    [Header("Exp")]
+    [SerializeField] private GameObject expPrefab;
+    [SerializeField] private Transform expHolderParent;
     // Singleton
     public static Pool_Manager Instance { get; private set; }
 
@@ -37,11 +42,17 @@ public class Pool_Manager : MonoBehaviour
     void Start()
     {
         enemyPool = new List<GameObject>();
-        bulletPool = new List<GameObject>();
         GenerateEnemies(defaultPoolSize);
+
+        bulletPool = new List<GameObject>();
         GenerateBullets(defaultPoolSize);
+
+
+        expPool = new List<GameObject>();
+        GenerateExp(defaultPoolSize);
     }
 
+    //ENEMIES POOLING =================================================================================
 
     List<GameObject> GenerateEnemies(int amount)
     {
@@ -72,6 +83,8 @@ public class Pool_Manager : MonoBehaviour
         return newEnemy;
     }
 
+    //BULLETS POOLING =================================================================================
+
     List<GameObject> GenerateBullets(int amount)
     {
         for (int i = 0; i < amount; i++)
@@ -99,5 +112,35 @@ public class Pool_Manager : MonoBehaviour
         bulletPool.Add(newBullet);
 
         return newBullet;
+    }
+
+    //EXP POOLING =================================================================================
+    List<GameObject> GenerateExp(int amount)
+    {
+        for (int i = 0; i < amount; i++)
+        {
+            GameObject exp = Instantiate(expPrefab, expHolderParent);
+            exp.SetActive(false);
+
+            expPool.Add(exp);
+        }
+
+        return expPool;
+    }
+    public GameObject RequestExp()
+    {
+        foreach (GameObject exp in expPool)
+        {
+            if (exp.activeInHierarchy == false)
+            {
+                exp.SetActive(true);
+                return exp;
+            }
+        }
+
+        GameObject newExp = Instantiate(expPrefab, expHolderParent);
+        expPool.Add(newExp);
+
+        return newExp;
     }
 }

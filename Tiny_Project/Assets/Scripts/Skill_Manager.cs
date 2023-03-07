@@ -35,7 +35,7 @@ public class Skill_Manager : MonoBehaviour
     {
         if (collision.CompareTag("Exp"))
         {
-            currentExp += collision.gameObject.GetComponent<Exp>().GetValue();
+            AddExp(collision.gameObject.GetComponent<Exp>().GetValue());
             collision.gameObject.SetActive(false);
         }
     }
