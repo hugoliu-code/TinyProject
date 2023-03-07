@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+    /*
+     * Basic player testing script for MOVEMENT ONLY
+     * Other player attributes and mechanics will be on other scripts attached to the player object in some way
+     */
     Rigidbody2D rb;
     
     [Header("Attributes")]

@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class Pool_Manager : MonoBehaviour
 {
+    /*
+     * This script should be present in any scene that has a large amount of poolable objects. Currently supports
+     * Basic Enemies
+     * Bullets
+     * Exp
+     * 
+     * This script stores lists of objects that will be commonly "destroyed", and "created", such as Exp. 
+     * Instead of actually destroying the object, we will disable it and store it in a list to be activated later
+     * This saves us from the expensive process of initialization
+     */
     private List<GameObject> enemyPool;
     private List<GameObject> bulletPool;
     private List<GameObject> expPool;

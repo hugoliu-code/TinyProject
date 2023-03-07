@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Exp_Manager : MonoBehaviour
 {
+    /*
+     * This script should be present in every scene that requires Exp to be dropped in some way
+     * It deals with the generation of exp by referencing the pool manager singleton
+    */
     // Singleton
     public static Exp_Manager Instance { get; private set; }
 

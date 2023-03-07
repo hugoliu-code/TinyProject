@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy_Follow : MonoBehaviour
 {
+    /*
+     * Basic enemy testing script
+     */
     Transform playerTransform;
     Rigidbody2D rb;
     private float startTime; //Temporary Variable for testing purposes; DeltaTime is inconsistent in the beginning and causes massive speed spikes on load
