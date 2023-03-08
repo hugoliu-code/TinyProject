@@ -9,7 +9,7 @@ public class Bullet_Script : MonoBehaviour
     private Vector3 previousPosition; //position of the object the frame before
     private bool hasCollided = false;
 
-    public AttackData attackData;
+    public Attack_Data attackData;
     private void Start()
     {
         previousPosition = transform.position;
@@ -39,7 +39,7 @@ public class Bullet_Script : MonoBehaviour
             Debug.Log("ERROR: Bullet has no assigned attackData; Check gun scripts.");
             Destroy(this.gameObject);
         }
-        AttackData tempData = ScriptableObject.Instantiate<AttackData>(attackData);
+        Attack_Data tempData = ScriptableObject.Instantiate<Attack_Data>(attackData);
 
         tempData.receiver = collision.collider.gameObject;
         Hit_Manager.Instance.BroadcastHit(tempData);

@@ -14,7 +14,7 @@ public class Hit_Manager : MonoBehaviour
      */
 
     public event onHitEventDelegate onHit;
-    public delegate void onHitEventDelegate(AttackData data);
+    public delegate void onHitEventDelegate(Attack_Data data);
 
     // Singleton
     public static Hit_Manager Instance { get; private set; }
@@ -32,7 +32,7 @@ public class Hit_Manager : MonoBehaviour
             Instance = this;
         }
     }
-    public void BroadcastHit(AttackData data)
+    public void BroadcastHit(Attack_Data data)
     {
         onHit?.Invoke(data);
     }

@@ -47,7 +47,7 @@ public class Enemy_Follow : MonoBehaviour
     }
 
  
-    private void TakeDamage(AttackData data)
+    private void TakeDamage(Attack_Data data)
     {
         if (data.receiver.Equals(this.gameObject))
         {

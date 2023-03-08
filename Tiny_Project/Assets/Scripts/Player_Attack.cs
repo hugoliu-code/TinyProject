@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_Attack : MonoBehaviour
 {
     [Header("Attributes")]
-    [SerializeField] AttackData attackData;
+    [SerializeField] Attack_Data attackData;
     [SerializeField] float bulletSpeed = 10;
     [SerializeField] float attackDelay = 1f;
     [SerializeField] GameObject projectile;
