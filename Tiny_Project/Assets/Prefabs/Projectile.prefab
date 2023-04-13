@@ -49,7 +49,7 @@ MonoBehaviour:
   collidables:
     serializedVersion: 2
     m_Bits: 64
-  attackData: {fileID: 0}
+  attackData: {fileID: 11400000, guid: dc4ba9d224bd41d4fb346b7f3a3097a0, type: 2}
 --- !u!96 &944574100501932311
 TrailRenderer:
   serializedVersion: 2

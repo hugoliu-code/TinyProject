@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b713caf07900b2c4ea1673658692aaae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackData: {fileID: 11400000, guid: ec035ac4c49215444a6351b089f9e72e, type: 2}
+  attackData: {fileID: 11400000, guid: dc4ba9d224bd41d4fb346b7f3a3097a0, type: 2}
   bulletSpeed: 10
   attackDelay: 1
   projectile: {fileID: 2476403996105301024, guid: 85e317a2b4116014589a2c5b0b7d9632, type: 3}
@@ -1534,6 +1534,10 @@ PrefabInstance:
     - target: {fileID: 3045802328515157531, guid: e2feb3de0d43fa749a5fea0a8f9f3720, type: 3}
       propertyPath: m_Name
       value: Exp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3045802328515157531, guid: e2feb3de0d43fa749a5fea0a8f9f3720, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3045802328515157535, guid: e2feb3de0d43fa749a5fea0a8f9f3720, type: 3}
       propertyPath: m_RootOrder

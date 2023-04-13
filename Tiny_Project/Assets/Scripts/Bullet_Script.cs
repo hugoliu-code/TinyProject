@@ -37,7 +37,7 @@ public class Bullet_Script : MonoBehaviour
         if (attackData == null)
         {
             Debug.Log("ERROR: Bullet has no assigned attackData; Check gun scripts.");
-            Destroy(this.gameObject);
+            gameObject.SetActive(false);
         }
         Attack_Data tempData = ScriptableObject.Instantiate<Attack_Data>(attackData);
 
