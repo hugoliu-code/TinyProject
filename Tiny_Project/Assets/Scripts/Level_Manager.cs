@@ -20,7 +20,7 @@ public class Level_Manager : MonoBehaviour
         }
     }
 
-    public async void LoadScene(string sceneName)
+    public void LoadScene(string sceneName)
     {
         var scene = SceneManager.LoadSceneAsync(sceneName);
         scene.allowSceneActivation = false;
